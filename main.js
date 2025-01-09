@@ -12,11 +12,13 @@ const hasRead = document.querySelector("#hasRead");
 
 const myLibrary = [];
 
-function Book(author, title, pages, hasRead) {
-  this.author = author;
-  this.title = title;
-  this.pages = pages;
-  this.hasRead = hasRead;
+class Book {
+    constructor(author, title, pages, hasRead) {
+        this.author = author;
+        this.title = title;
+        this.pages = pages;
+        this.hasRead = hasRead;
+    }
 }
 
 function addBookToLibrary(author, title, pages, hasRead) {
