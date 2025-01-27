@@ -1,6 +1,6 @@
 const newBook = document.querySelector("#new-book");
 const prompt = document.querySelector("#new-book-prompt");
-const submit = document.querySelector("#submit");
+const form = document.querySelector("#create-book-form");
 const close = document.querySelector("#close");
 
 const books = document.querySelector("#books")
@@ -95,15 +95,11 @@ close.addEventListener("click", (e) => {
 
 
 // Checks when a new book is added.
-submit.addEventListener("click", (e) => {
-    console.log("A")
+form.addEventListener("submit", (e) => {
+    event.preventDefault();
     addBookToLibrary(author.value, title.value, pages.value, hasRead.checked);
-    renderBooks();
-
     prompt.close();
+    form.reset();
 
-    title.value = "";
-    author.value = "";
-    pages.value = "";
-    hasRead.checked = false;
+    renderBooks();
 })

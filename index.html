@@ -17,24 +17,26 @@
         <button id="new-book">New Book</button>
 
         <dialog id="new-book-prompt">
-            <button id="close">Close</button>
-            <label for="title">
-                Title:
-                <input type="text" name="title" id="title" required>
-            </label>
-            <label for="author">
-                Author:
-                <input type="text" name="author" id="author" required>
-            </label>
-            <label for="pages">
-                Pages:
-                <input type="number" name="pages" id="pages" required>
-            </label>
-            <label for="hasRead">
-                Read:
-                <input type="checkbox" name="hasRead" id="hasRead" required>
-            </label>
-            <button id="submit">Submit</button>
+            <form id="create-book-form">
+                <button id="close">Close</button>
+                <label for="title">
+                    Title:
+                    <input type="text" name="title" id="title" required>
+                </label>
+                <label for="author">
+                    Author:
+                    <input type="text" name="author" id="author" required>
+                </label>
+                <label for="pages">
+                    Pages:
+                    <input type="number" name="pages" id="pages" required>
+                </label>
+                <label for="hasRead">
+                    Read:
+                    <input type="checkbox" name="hasRead" id="hasRead">
+                </label>
+                <button id="submit">Submit</button>
+            </form>
         </dialog>
     </div>
 
