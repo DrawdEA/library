@@ -21,11 +21,11 @@
                 <button id="close">Close</button>
                 <label for="title">
                     Title:
-                    <input type="text" name="title" id="title" required>
+                    <input type="text" name="title" id="title" pattern=".{3,}" required> <!-- At least 3 letters -->
                 </label>
                 <label for="author">
                     Author:
-                    <input type="text" name="author" id="author" required>
+                    <input type="text" name="author" id="author" pattern="\b\w+\b(\s+\b\w+\b)+" required> <!-- At least 2 words -->
                 </label>
                 <label for="pages">
                     Pages:

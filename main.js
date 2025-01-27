@@ -93,6 +93,21 @@ close.addEventListener("click", (e) => {
     prompt.close();
 })
 
+title.addEventListener("input", () => {
+    if (title.validity.patternMismatch) {
+        title.setCustomValidity("Too short!");
+    } else {
+        title.setCustomValidity("");
+    }
+})
+
+author.addEventListener("input", () => {
+    if (author.validity.patternMismatch) {
+        author.setCustomValidity("Must have a last and first name!");
+    } else {
+        author.setCustomValidity("");
+    }
+})
 
 // Checks when a new book is added.
 form.addEventListener("submit", (e) => {
